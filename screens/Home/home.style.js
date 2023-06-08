@@ -27,7 +27,8 @@ const styles = StyleSheet.create({
     iconscontainer: {
         display: 'flex',
         flexDirection: 'row',
-        justifyContent:'space-between',
+        justifyContent: 'space-between',
+        marginTop:30,
        
         
     },

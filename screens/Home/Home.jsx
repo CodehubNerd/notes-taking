@@ -13,12 +13,12 @@ const Home = () => {
           <Text style={styles.smalltext}>4 notes</Text>
           
           <View style = {styles.iconscontainer}>
-              <View><Feather name="menu" size={24} color="white" /></View>
+              <View><Feather name="menu" size={20} color="white" /></View>
 
               <View style ={styles.iconscontainerright}>
-              <View style ={{paddingRight:8}}><FontAwesome name="file-pdf-o" size={24} color="white" /></View> 
-              <View><Feather name="search" size={24} color="white" /></View> 
-              <View><MaterialIcons name="more-vert" size={24} color="white" /></View> 
+              <View style ={{paddingRight:8}}><FontAwesome name="file-pdf-o" size={20} color="white" /></View> 
+              <View><Feather name="search" size={20} color="white" /></View> 
+              <View><MaterialIcons name="more-vert" size={20} color="white" /></View> 
               </View>
             
           </View>
