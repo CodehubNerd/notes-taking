@@ -1,5 +1,5 @@
-const COlOR = {
-    Primary: "#010101",
+const COlORS = {
+    primaryC: "#010101",
     secondary: "F46A4E",
     tertiary:"#3A3A3A",
     gray: "#989898",
@@ -14,8 +14,8 @@ const FONT = {
 
 const SIZES = {
     medium: 11,
-    small: 10,
+    small: 15,
     large: 30
 };
 
-export { COlOR,FONT,SIZES }
+export { COlORS, FONT, SIZES };

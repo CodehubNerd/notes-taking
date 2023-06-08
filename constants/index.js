@@ -1,4 +1,4 @@
-import { COlOR, FONT, SIZES } from "./theme";
+import { COlORS, FONT, SIZES } from "./theme";
 
 
-export { COlOR, FONT, SIZES };
+export { COlORS, FONT, SIZES };
