@@ -7,9 +7,9 @@ const COlOR = {
 };
 
 const FONT = {
-    ExtraBold: "ExtraBold",
-    semibold: "semibold",
-    medium: "medium",
+    INtBold: "ExtraBold",
+    INMedium: "semibold",
+    INsemi: "medium",
 };
 
 const SIZES = {
