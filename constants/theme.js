@@ -1,9 +1,9 @@
-const COlORS = {
-    primary: "#010101",
+const COlOR = {
+    Primary: "#010101",
     secondary: "F46A4E",
     tertiary:"#3A3A3A",
     gray: "#989898",
-    white:"#FAFAFA"
+    white:"#FAFAFA",
 };
 
 const FONT = {
@@ -17,3 +17,5 @@ const SIZES = {
     small: 10,
     large: 30
 };
+
+export { COlOR,FONT,SIZES }
