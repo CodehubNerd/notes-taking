@@ -19,8 +19,11 @@ const Home = () => {
              <TouchableOpacity style  ={{marginRight:20}}><Feather name="search" size={20} color="white" /></TouchableOpacity>
               <TouchableOpacity><MaterialIcons name="more-vert" size={20} color="white" /></TouchableOpacity> 
               </View>
-            
-          </View>
+      </View>
+      
+      <View style={styles.notestaken}>
+        <Notes/>
+      </View>
     </View>
   )
 }

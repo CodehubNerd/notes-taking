@@ -37,6 +37,11 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         justifyContent: 'space-between',
     
+    },
+    notestaken: {
+        backgroundColor: '',
+        color:'white',
+        padding:15,
     }
 })
 
