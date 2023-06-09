@@ -16,7 +16,6 @@ const Home = () => {
               <View><Feather name="menu" size={20} color="white" /></View>
 
               <View style ={styles.iconscontainerright}>
-              <View style ={{paddingRight:8}}><FontAwesome name="file-pdf-o" size={20} color="white" /></View> 
               <View><Feather name="search" size={20} color="white" /></View> 
               <View><MaterialIcons name="more-vert" size={20} color="white" /></View> 
               </View>
