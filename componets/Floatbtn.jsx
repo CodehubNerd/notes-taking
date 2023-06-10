@@ -7,7 +7,7 @@ const Floatbtn = () => {
   return (
     <View>
           <TouchableOpacity style={notes.btn}>
-              <FontAwesome name="pencil-square-o" size={24} color="#F46A4E" />
+              <FontAwesome name="pencil-square-o" size={20} color="#F46A4E" />
           </TouchableOpacity>
     </View>
   )
