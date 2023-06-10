@@ -2,6 +2,7 @@ import { View, Text, TouchableOpacity} from 'react-native'
 import React from 'react'
 
 import Notes from '../../componets/Notes'
+import Floatbtn from '../../componets/Floatbtn'
 import { Feather } from '@expo/vector-icons';
 import { MaterialIcons } from '@expo/vector-icons';
 import styles from "./home.style";
@@ -24,6 +25,10 @@ const Home = () => {
       <View style={styles.notestaken}>
         <Notes/>
       </View>
+
+
+
+      
     </View>
   )
 }

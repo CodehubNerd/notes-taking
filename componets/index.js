@@ -1,2 +1,3 @@
 import Notes from './Notes';
-export { Notes };
+import Floatbtn from './Floatbtn';
+export { Notes,Floatbtn};
