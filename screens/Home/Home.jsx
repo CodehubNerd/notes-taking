@@ -27,8 +27,8 @@ const Home = () => {
       </View>
 
 
+<Floatbtn/>
 
-      
     </View>
   )
 }
