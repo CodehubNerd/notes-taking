@@ -5,7 +5,7 @@ import { useFonts } from "expo-font";
 
 import { NavigationContainer} from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import { Home } from '../screens';
+import { Home,Typenote} from '../screens';
 
 
 const Stack = createNativeStackNavigator();
@@ -31,6 +31,7 @@ export default function App() {
        <StatusBar translucent={true} />
         <Stack.Navigator screenOptions={{headerShown:false}}>
           <Stack.Screen name="Home" component={Home}/>
+          <Stack.Screen name="Typenote" component={Typenote}/>
         </Stack.Navigator>
       </>
        
