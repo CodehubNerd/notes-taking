@@ -5,8 +5,17 @@ import styles from "./typenote.style";
 
 
 const Typenote = () => {
-  const [text, seText] = useState('');
-  //pop or focus on the input feild 
+  const [text, setText] = useState('');
+  //pop or focus on the input feild
+
+  useEffect(() => {
+    inputRef.focus();
+  }, [])
+
+  const handleTextChange = (newText) => {
+    setText(newText);
+  };
+  
   return (
     <View style ={styles.container}>
       <View style = {styles.iconscontainer}>
