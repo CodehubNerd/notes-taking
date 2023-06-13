@@ -15,13 +15,23 @@ const Typenote = () => {
   const handleTextChange = (newText) => {
     setText(newText);
   };
-  
+
   let inputRef;
   return (
     <View style ={styles.container}>
       <View style = {styles.iconscontainer}>
       <AntDesign name="back" size={24} color="white" />
       </View>
+      
+      <TextInput
+        style={styles.input}
+        value={text}
+        onChangeText={handleTextChange}
+        placeholder="Type something..."
+        ref={(ref) => { inputRef = ref; }}
+      />
+      
+      <Text>{text}</Text>
 
     </View>
   )
