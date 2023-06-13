@@ -16,6 +16,7 @@ const Typenote = () => {
     setText(newText);
   };
   
+  let inputRef;
   return (
     <View style ={styles.container}>
       <View style = {styles.iconscontainer}>
