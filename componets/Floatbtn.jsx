@@ -8,7 +8,7 @@ const Floatbtn = () => {
   const navigation = useNavigation();
   return (
     <View>
-          <TouchableOpacity style={notes.btn} onPress = {() => {navigation("Typenote")}}>
+          <TouchableOpacity style={notes.btn} onPress = {() => {navigation.navigate("Typenote")}}>
               <FontAwesome name="pencil-square-o" size={20} color="#F46A4E" />
           </TouchableOpacity>
     </View>
