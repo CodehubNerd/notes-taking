@@ -21,10 +21,11 @@ const styles = StyleSheet.create({
     iconscontainer: {
         display: 'flex',
         justifyContent: 'flex-start',
-        marginTop: 30,
-       
-       
-        
+        marginTop: 30,    
+    },
+    input: {
+        color: "#FAFAFA",
+        marginTop:20,
     }
 })
 
