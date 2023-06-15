@@ -42,7 +42,14 @@ const styles = StyleSheet.create({
         backgroundColor: '',
         color:'white',
         padding:15,
+    },
+
+    singlenote: {
+        color: "#FAFAFA",
+        display: "flex",
+    
     }
+
 })
 
 export default styles;
