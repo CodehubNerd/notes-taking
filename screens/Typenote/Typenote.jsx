@@ -1,12 +1,11 @@
 import { View,Text,TextInput,TouchableOpacity} from 'react-native';
 import React, { useState, useEffect } from 'react';
-import { NavigationContainer, useNavigation} from '@react-navigation/native';
 import { AntDesign } from '@expo/vector-icons';
 import styles from "./typenote.style";
 
 
-const Typenote = () => {
-  const navigation = useNavigation();
+const Typenote = ({navigation}) => {
+
   const [tytext, setTytext] = useState('');
   //pop or focus on the input feild
 

@@ -7,7 +7,8 @@ import { Feather } from '@expo/vector-icons';
 import { MaterialIcons } from '@expo/vector-icons';
 import styles from "./home.style";
 
-const Home = () => {
+const Home = ({ navigation,route  }) => {
+  const typedText = route.params?.tytext || '';
   return (
     <View style = {styles.container}>
       <Text style = {styles.Headingtext}>Notes</Text>
