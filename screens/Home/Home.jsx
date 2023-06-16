@@ -1,4 +1,4 @@
-import { View, Text, TouchableOpacity} from 'react-native'
+import { View, Text, TouchableOpacity,ScrollView} from 'react-native'
 import React from 'react'
 
 import Notes from '../../componets/Notes'
@@ -22,13 +22,16 @@ const Home = ({ navigation,route  }) => {
               <TouchableOpacity><MaterialIcons name="more-vert" size={20} color="white" /></TouchableOpacity> 
               </View>
       </View>
-      
+   
       <View style={styles.notestaken}>
-        <Notes/>
-      </View>
+        <View style={styles.singlenote}>
+          <Text style={styles.note}>{typedText}</Text>
+       </View>
+        </View>
+        <Floatbtn/>
+    
 
 
-<Floatbtn/>
 
     </View>
   )

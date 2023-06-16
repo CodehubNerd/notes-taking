@@ -39,15 +39,18 @@ const styles = StyleSheet.create({
     
     },
     notestaken: {
-        backgroundColor: '',
+        backgroundColor: '#171717',
         color:'white',
         padding:15,
     },
 
     singlenote: {
-        color: "#FAFAFA",
+        color:'white',
         display: "flex",
-    
+
+    },
+    note: {
+        color:'white',
     }
 
 })
