@@ -1,5 +1,6 @@
 import { View,Text,TextInput,TouchableOpacity} from 'react-native';
 import React, { useState, useEffect } from 'react';
+import * as SecureStore from 'expo-secure-store';
 import { AntDesign } from '@expo/vector-icons';
 import styles from "./typenote.style";
 
@@ -19,8 +20,14 @@ const Typenote = ({navigation}) => {
   };
 
   //props or instruction on wht should happen when we are clicking the button
-  const handleButtonPress = () => {
-    navigation.navigate("Home", { tytext });
+  const handleButtonPress = async () => {
+    try {
+      navigation.navigate("Home", { tytext });
+      navigation.navigate("Home");
+    } catch (error) {
+      console.log(error);
+    }
+   
   };
 
   let inputRef;
