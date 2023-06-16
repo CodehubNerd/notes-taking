@@ -43,7 +43,7 @@ const Home = ({ navigation,route  }) => {
    
       <View style={styles.notestaken}>
         <View style={styles.singlenote}>
-          <Text style={styles.note}>{typedText}</Text>
+          <Text style={styles.note}>{tytext}</Text>
        </View>
         </View>
         <Floatbtn/>
