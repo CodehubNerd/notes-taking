@@ -22,7 +22,8 @@ const Typenote = ({navigation}) => {
   //props or instruction on wht should happen when we are clicking the button
   const handleButtonPress = async () => {
     try {
-      await SecureStore.setItemAsync("Home", { tytext }); 
+      const textToStore = JSON.stringify(tytext);
+      await SecureStore.setItemAsync("tytext", textToStore); 
       navigation.navigate("Home");
     } catch (error) {
       console.log(error);
