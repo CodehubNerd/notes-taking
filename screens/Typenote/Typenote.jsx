@@ -13,10 +13,12 @@ const Typenote = ({navigation}) => {
     inputRef.focus();
   }, [])
 
+  //monitoring the change in text
   const handleTextChange = (newText) => {
     setTytext(newText);
   };
 
+  //props or instruction on wht should happen when we are clicking the button
   const handleButtonPress = () => {
     navigation.navigate("Home", { tytext });
   };
