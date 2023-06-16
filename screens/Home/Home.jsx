@@ -1,7 +1,6 @@
 import { View, Text, TouchableOpacity,ScrollView} from 'react-native'
-import React from 'react'
-
-import Notes from '../../componets/Notes'
+import React, { useState, useEffect } from 'react';
+import * as SecureStore from 'expo-secure-store';
 import Floatbtn from '../../componets/Floatbtn'
 import { Feather } from '@expo/vector-icons';
 import { MaterialIcons } from '@expo/vector-icons';
@@ -9,6 +8,25 @@ import styles from "./home.style";
 
 const Home = ({ navigation,route  }) => {
   const typedText = route.params?.tytext || '';
+  const [tytext, setTytext] = useState('');
+
+
+  // as soon we log the screen we fecth this informmation from the storage
+  useEffect(() => {
+    const retrieveTypedText = async () => {
+      try {
+        const text = await SecureStore.getItemAsync('tytext')
+        if (text !== null) {
+          setTytext(text);
+        }
+      } catch (error) {
+        console.log(error);
+      }
+    };
+    retrieveTypedText();
+  }, [])
+  
+
   return (
     <View style = {styles.container}>
       <Text style = {styles.Headingtext}>Notes</Text>
