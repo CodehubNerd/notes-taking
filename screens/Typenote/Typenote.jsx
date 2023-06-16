@@ -22,7 +22,7 @@ const Typenote = ({navigation}) => {
   //props or instruction on wht should happen when we are clicking the button
   const handleButtonPress = async () => {
     try {
-      navigation.navigate("Home", { tytext });
+      await SecureStore.setItemAsync("Home", { tytext }); 
       navigation.navigate("Home");
     } catch (error) {
       console.log(error);
