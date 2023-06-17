@@ -1,7 +1,7 @@
-import { View, Text, TouchableOpacity,ScrollView} from 'react-native'
+import { View, Text, TouchableOpacity, ScrollView } from 'react-native';
 import React, { useState, useEffect } from 'react';
 import * as SecureStore from 'expo-secure-store';
-import Floatbtn from '../../componets/Floatbtn'
+import Floatbtn from '../../componets/Floatbtn';
 import { Feather } from '@expo/vector-icons';
 import { MaterialIcons } from '@expo/vector-icons';
 import styles from "./home.style";
@@ -47,9 +47,6 @@ const Home = ({ navigation,route  }) => {
        </View>
         </View>
         <Floatbtn/>
-    
-
-
 
     </View>
   )

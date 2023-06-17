@@ -22,13 +22,20 @@ const Typenote = ({navigation}) => {
   //props or instruction on wht should happen when we are clicking the button
   const handleButtonPress = async () => {
     try {
-      const textToStore = JSON.stringify(tytext);
-      await SecureStore.setItemAsync("tytext", textToStore); 
-      navigation.navigate("Home");
+      const storedText = await SecureStore.getItemAsync('tytext');
+      let newText = tytext;
+      if (storedText) {
+        const storedArray = JSON.parse(storedText);
+        storedArray.push(tytext);
+        newText = JSON.stringify(storedArray);
+      } else {
+        newText = JSON.stringify([tytext]);
+      }
+      await SecureStore.setItemAsync('tytext', newText);
+      navigation.navigate('Home');
     } catch (error) {
       console.log(error);
     }
-   
   };
 
   let inputRef;
@@ -49,7 +56,6 @@ const Typenote = ({navigation}) => {
       />
       
       <Text>{tytext}</Text>
-
     </View>
   )
 }
