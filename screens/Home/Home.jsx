@@ -8,7 +8,7 @@ import styles from "./home.style";
 
 const Home = ({ navigation,route  }) => {
   const typedText = route.params?.tytext || '';
-  const [tytext, setTytext] = useState('');
+  const [tytext, setTytext] = useState([]);
 
 
   // as soon we log the screen we fecth this informmation from the storage
