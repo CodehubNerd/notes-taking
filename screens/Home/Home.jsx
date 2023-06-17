@@ -8,24 +8,25 @@ import styles from "./home.style";
 
 const Home = ({ navigation,route  }) => {
   const typedText = route.params?.tytext || '';
-  const [tytext, setTytext] = useState([]);
+  const [typedTextList, setTypedTextList] = useState([]);
 
 
   // as soon we log the screen we fecth this informmation from the storage
   useEffect(() => {
     const retrieveTypedText = async () => {
       try {
-        const text = await SecureStore.getItemAsync('tytext')
-        if (text) {
-          const storedArray  = JSON.parse(text);
-          setTytext(storedArray);
+        const storedText = await SecureStore.getItemAsync('typedText');
+        if (storedText) {
+          const storedArray = JSON.parse(storedText);
+          setTypedTextList(storedArray);
         }
       } catch (error) {
         console.log(error);
       }
     };
+
     retrieveTypedText();
-  }, [])
+  }, []);
   
 
   return (
@@ -43,8 +44,12 @@ const Home = ({ navigation,route  }) => {
       </View>
    
       <View style={styles.notestaken}>
+        {/*mapping throught the typed text*/}
         <View style={styles.singlenote}>
-          <Text style={styles.note}>{tytext}</Text>
+          {typedTextList.map((text, index) => (
+             <Text style={styles.note} key={index}> {text} </Text>
+          ))}
+         
        </View>
         </View>
         <Floatbtn/>
