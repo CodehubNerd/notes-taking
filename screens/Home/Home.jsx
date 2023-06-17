@@ -16,8 +16,9 @@ const Home = ({ navigation,route  }) => {
     const retrieveTypedText = async () => {
       try {
         const text = await SecureStore.getItemAsync('tytext')
-        if (text !== null) {
-          setTytext(text);
+        if (text) {
+          const storedArray  = JSON.parse(text);
+          setTytext(storedArray);
         }
       } catch (error) {
         console.log(error);
