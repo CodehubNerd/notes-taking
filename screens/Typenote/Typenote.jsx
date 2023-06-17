@@ -7,7 +7,7 @@ import styles from "./typenote.style";
 
 const Typenote = ({navigation}) => {
 
-  const [tytext, setTytext] = useState('');
+  const [typedText, setTypedText] = useState('');
   //pop or focus on the input feild
 
   useEffect(() => {
@@ -15,23 +15,23 @@ const Typenote = ({navigation}) => {
   }, [])
 
   //monitoring the change in text
-  const handleTextChange = (newText) => {
-    setTytext(newText);
+  const handleTextChange = (text) => {
+    setTypedText(text);
   };
 
   //props or instruction on wht should happen when we are clicking the button
   const handleButtonPress = async () => {
     try {
-      const storedText = await SecureStore.getItemAsync('tytext');
-      let newText = tytext;
+      const storedText = await SecureStore.getItemAsync('typedText');
+      let newText = typedText;
       if (storedText) {
         const storedArray = JSON.parse(storedText);
-        storedArray.push(tytext);
+        storedArray.push(typedText);
         newText = JSON.stringify(storedArray);
       } else {
-        newText = JSON.stringify([tytext]);
+        newText = JSON.stringify([typedText]);
       }
-      await SecureStore.setItemAsync('tytext', newText);
+      await SecureStore.setItemAsync('typedText', newText);
       navigation.navigate('Home');
     } catch (error) {
       console.log(error);
@@ -49,13 +49,13 @@ const Typenote = ({navigation}) => {
       
       <TextInput
         style={styles.input}
-        value={tytext}
+        value={typedText}
         onChangeText={handleTextChange}
         placeholder="Type something..."
         ref={(ref) => { inputRef = ref; }}
       />
       
-      <Text>{tytext}</Text>
+      <Text>{typedText}</Text>
     </View>
   )
 }
