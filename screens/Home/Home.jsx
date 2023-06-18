@@ -44,14 +44,16 @@ const Home = ({ navigation,route  }) => {
       </View>
    
       <View style={styles.notestaken}>
-        {/*mapping throught the typed text*/}
-        <View style={styles.singlenote}>
-          {typedTextList.map((text, index) => (
-             <Text style={styles.note} key={index}> {text} </Text>
-          ))}
-         
-       </View>
-        </View>
+  <ScrollView>
+    {typedTextList.map((text, index) => (
+      <View key={index}>
+        <Text style={styles.note}>{text}</Text>
+        {index !== typedTextList.length - 1 && <View style={styles.separator} />}
+      </View>
+    ))}
+  </ScrollView>
+</View>
+
         <Floatbtn/>
 
     </View>
