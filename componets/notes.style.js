@@ -9,9 +9,7 @@ const notes = StyleSheet.create({
         padding:16,
         width: 60,
         borderRadius:50,
-        height: 60,
-        top: 410,
-        right: 20,
+        bottom: 0,
         alignItems: 'center',
         justifyContent: 'center',
         
