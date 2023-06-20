@@ -62,6 +62,10 @@ const styles = StyleSheet.create({
       borderBottomColor: 'grey',
       marginVertical: 10,
     },
+     homebtncontainer: {
+        display: 'flex',
+        justifyContent:'flex-end',
+    }
 
 })
 

@@ -53,8 +53,10 @@ const Home = ({ navigation,route  }) => {
     ))}
   </ScrollView>
 </View>
-
-        <Floatbtn/>
+      <View style={styles.homebtncontainer}>
+      <Floatbtn/>
+      </View>
+        
 
     </View>
   )
