@@ -63,8 +63,7 @@ const styles = StyleSheet.create({
       marginVertical: 10,
     },
      homebtncontainer: {
-        display: 'flex',
-        justifyContent:'flex-end',
+     
     }
 
 })

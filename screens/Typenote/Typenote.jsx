@@ -44,7 +44,11 @@ const Typenote = ({navigation}) => {
       <View style={styles.iconscontainer}>
          <TouchableOpacity onPress={handleButtonPress}>
           <AntDesign name="back" size={24} color="white" />
-          </TouchableOpacity>
+        </TouchableOpacity>
+
+        <View style={styles.txtcontainertyping}>
+        <Text style={styles.typingcolor}>Start typing</Text>
+        </View>
       </View>
       
       <TextInput

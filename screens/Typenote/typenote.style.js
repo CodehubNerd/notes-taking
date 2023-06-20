@@ -1,5 +1,5 @@
 import { StyleSheet } from "react-native";
-import { COLORS, FONT, SIZE, SIZES } from "../../constants";
+import { SIZES } from "../../constants";
 
 
 const styles = StyleSheet.create({
@@ -21,11 +21,19 @@ const styles = StyleSheet.create({
     iconscontainer: {
         display: 'flex',
         justifyContent: 'flex-start',
+        alignItems:'center',
+        flexDirection:'row',
         marginTop: 30,    
+    },
+    txtcontainertyping: {
+        
     },
     input: {
         color: "#FAFAFA",
         marginTop:20,
+    },
+    typingcolor: {
+        color:'white'
     }
 })
 

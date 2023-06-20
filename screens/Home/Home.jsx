@@ -51,12 +51,10 @@ const Home = ({ navigation,route  }) => {
         {index !== typedTextList.length - 1 && <View style={styles.separator} />}
       </View>
     ))}
-  </ScrollView>
+        </ScrollView>
+        <Floatbtn/>
 </View>
-      <View style={styles.homebtncontainer}>
-      <Floatbtn/>
-      </View>
-        
+     
 
     </View>
   )
