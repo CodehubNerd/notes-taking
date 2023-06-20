@@ -7,7 +7,7 @@ import notes from './notes.style';
 const Floatbtn = () => {
   const navigation = useNavigation();
   return (
-    <View style ={style.btncontainer}>
+    <View style ={notes.btncontainer}>
           <TouchableOpacity style={notes.btn} onPress = {() => {navigation.navigate("Typenote")}}>
               <FontAwesome name="pencil-square-o" size={20} color="#F46A4E" />
           </TouchableOpacity>
