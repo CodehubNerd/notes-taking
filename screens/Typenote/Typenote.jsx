@@ -34,7 +34,7 @@ const Typenote = ({navigation}) => {
         }
         await SecureStore.setItemAsync('typedText', newText);
       }
-      navigation.navigate('ScreenA');
+      navigation.navigate('Home');
     } catch (error) {
       console.log(error);
     }
