@@ -1,5 +1,5 @@
 import { StyleSheet } from "react-native";
-import { COLORS, FONT, SIZE, SIZES } from "../../constants";
+import { SIZES } from "../../constants";
 
 
 const styles = StyleSheet.create({
@@ -41,7 +41,9 @@ const styles = StyleSheet.create({
     notestaken: {
         backgroundColor: '#171717',
         color: 'white',
+        borderRadius:8,
         flex: 1,
+        marginTop:20,
         padding:20,
     },
 

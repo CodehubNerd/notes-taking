@@ -15,7 +15,9 @@ const notes = StyleSheet.create({
         justifyContent: 'center',
         
     }, btncontainer: {
-        
+        display: 'flex',
+        justifyContent: 'flex-end',
+        alignContent:'flex-end',
     }
 
 })
