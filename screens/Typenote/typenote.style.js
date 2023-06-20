@@ -37,8 +37,10 @@ const styles = StyleSheet.create({
         fontSize:20,
     },
     round: {
-        padding: 5,
-        backgroundColor:"#FAFAFA",
+        padding: 6,
+        borderRadius:50,
+        backgroundColor: "#3A3A3A",
+        textAlign:'center',
     },
 })
 

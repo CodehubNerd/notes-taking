@@ -22,17 +22,19 @@ const Typenote = ({navigation}) => {
   //props or instruction on wht should happen when we are clicking the button
   const handleButtonPress = async () => {
     try {
-      const storedText = await SecureStore.getItemAsync('typedText');
-      let newText = typedText;
-      if (storedText) {
-        const storedArray = JSON.parse(storedText);
-        storedArray.push(typedText);
-        newText = JSON.stringify(storedArray);
-      } else {
-        newText = JSON.stringify([typedText]);
+      if (typedText.trim() !== '') {
+        const storedText = await SecureStore.getItemAsync('typedText');
+        let newText = typedText;
+        if (storedText) {
+          const storedArray = JSON.parse(storedText);
+          storedArray.push(typedText);
+          newText = JSON.stringify(storedArray);
+        } else {
+          newText = JSON.stringify([typedText]);
+        }
+        await SecureStore.setItemAsync('typedText', newText);
       }
-      await SecureStore.setItemAsync('typedText', newText);
-      navigation.navigate('Home');
+      navigation.navigate('ScreenA');
     } catch (error) {
       console.log(error);
     }
@@ -43,7 +45,7 @@ const Typenote = ({navigation}) => {
     <View style ={styles.container}>
       <View style={styles.iconscontainer}>
          <TouchableOpacity onPress={handleButtonPress}>
-          <AntDesign  style={styles.round} name="back" size={24} color="white" />
+          <AntDesign  style={styles.round} name="back" size={24} color="#989898" />
         </TouchableOpacity>
 
         <View style={styles.txtcontainertyping}>
