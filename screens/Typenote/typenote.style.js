@@ -26,15 +26,20 @@ const styles = StyleSheet.create({
         marginTop: 30,    
     },
     txtcontainertyping: {
-        
+     marginLeft:20,   
     },
     input: {
         color: "#FAFAFA",
         marginTop:20,
     },
     typingcolor: {
-        color:'white'
-    }
+        color: 'white',
+        fontSize:20,
+    },
+    round: {
+        padding: 5,
+        backgroundColor:"#FAFAFA",
+    },
 })
 
 export default styles;

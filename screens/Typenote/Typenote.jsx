@@ -43,7 +43,7 @@ const Typenote = ({navigation}) => {
     <View style ={styles.container}>
       <View style={styles.iconscontainer}>
          <TouchableOpacity onPress={handleButtonPress}>
-          <AntDesign name="back" size={24} color="white" />
+          <AntDesign  style={styles.round} name="back" size={24} color="white" />
         </TouchableOpacity>
 
         <View style={styles.txtcontainertyping}>
