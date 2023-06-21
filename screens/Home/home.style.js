@@ -64,7 +64,35 @@ const styles = StyleSheet.create({
     },
      homebtncontainer: {
      
-    }
+    },
+    noteContainer: {
+      flexDirection: 'row',
+      alignItems: 'center',
+      marginBottom: 10,
+    },
+    checkbox: {
+      width: 20,
+      height: 20,
+      borderRadius: 10,
+      borderWidth: 2,
+      borderColor: 'blue',
+      marginRight: 10,
+    },
+    noteText: {
+      flex: 1,
+      fontSize: 16,
+    },
+    modalContainer: {
+      flex: 1,
+      justifyContent: 'flex-end',
+      backgroundColor: 'rgba(0, 0, 0, 0.5)',
+    },
+    bottomMenu: {
+      backgroundColor: 'white',
+      padding: 20,
+      flexDirection: 'row',
+      justifyContent: 'space-around',
+    },
 
 })
 

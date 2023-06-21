@@ -34,7 +34,8 @@ const styles = StyleSheet.create({
     },
     typingcolor: {
         color: 'white',
-        fontSize:20,
+        fontSize: 20,
+        fontWeight: 'bold',
     },
     round: {
         padding: 6,
