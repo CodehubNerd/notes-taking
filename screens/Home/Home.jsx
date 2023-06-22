@@ -9,6 +9,8 @@ import styles from "./home.style";
 const Home = ({ navigation,route  }) => {
   const typedText = route.params?.tytext || '';
   const [typedTextList, setTypedTextList] = useState([]);
+  const [selectedItems, setSelectedItems] = useState([]);
+  const [showModal, setShowModal] = useState(false);
 
 
   // as soon we log the screen we fecth this informmation from the storage
