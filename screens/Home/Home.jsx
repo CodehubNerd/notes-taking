@@ -74,13 +74,23 @@ const Home = ({ navigation,route  }) => {
       </View>
    
       <View style={styles.notestaken}>
-        
-  <ScrollView>
-    {typedTextList.map((text, index) => (
-      <View key={index}>
-        <Text style={styles.note}>{text}</Text>
-        {index !== typedTextList.length - 1 && <View style={styles.separator} />}
+
+  <ScrollView  >
+          {typedTextList.map((text, index) => (
+      
+      <TouchableOpacity
+      key={index}
+      onLongPress={() => handleLongPress(index)}
+      onPress={() => console.log('Item pressed')}
+    >
+  
+      <View>
+      <Text style={styles.note}>{text}</Text>
+      {selectedItems.includes(index) && <View style={styles.checkbox} />}
+      {index !== typedTextList.length - 1 && <View style={styles.separator} />}
+                
       </View>
+      </TouchableOpacity>
     ))}
         </ScrollView>
         <Modal visible={showModal} animationType="slide" transparent={true}>
