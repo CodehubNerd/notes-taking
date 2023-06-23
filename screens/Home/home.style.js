@@ -75,7 +75,7 @@ const styles = StyleSheet.create({
       height: 20,
       borderRadius: 10,
       borderWidth: 2,
-      borderColor: 'blue',
+      borderColor: '#F46A4E',
       marginRight: 10,
     },
     noteText: {
