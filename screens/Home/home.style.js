@@ -88,7 +88,7 @@ const styles = StyleSheet.create({
       backgroundColor: 'rgba(0, 0, 0, 0.5)',
     },
     bottomMenu: {
-      backgroundColor: 'white',
+      backgroundColor: 'black',
       padding: 20,
       flexDirection: 'row',
       justifyContent: 'space-around',

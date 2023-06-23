@@ -97,16 +97,16 @@ const Home = ({ navigation,route  }) => {
         <View style={styles.modalContainer}>
           <View style={styles.bottomMenu}>
             <TouchableOpacity onPress={handleShare}>
-              <Feather name="share" size={24} color="black" />
+              <Feather name="share" size={24} color="#3A3A3A" />
             </TouchableOpacity>
             <TouchableOpacity onPress={handleDelete}>
-              <Feather name="trash" size={24} color="black" />
+              <Feather name="trash" size={24} color="#3A3A3A" />
             </TouchableOpacity>
             <TouchableOpacity onPress={handleBookmark}>
-              <Feather name="bookmark" size={24} color="black" />
+              <Feather name="bookmark" size={24} color="#3A3A3A" />
             </TouchableOpacity>
             <TouchableOpacity onPress={handleCancel}>
-              <Feather name="x" size={24} color="black" />
+              <Feather name="x" size={24} color="#3A3A3A" />
             </TouchableOpacity>
           </View>
         </View>
