@@ -49,9 +49,27 @@ const Home = ({ navigation,route  }) => {
   };
 
   const handleDelete = () => {
-    // Perform delete action for the selected items
+    // Filter out the selected items from the typedTextList
+    const updatedList = typedTextList.filter((_, index) => !selectedItems.includes(index));
+  
+    // Update the typedTextList state with the updated list
+    setTypedTextList(updatedList);
+  
+    // Save the updated list to the storage
+    const saveTypedText = async () => {
+      try {
+        await SecureStore.setItemAsync('typedText', JSON.stringify(updatedList));
+      } catch (error) {
+        console.log(error);
+      }
+    };
+  
+    saveTypedText();
+
+    setSelectedItems([]);
     setShowModal(false);
   };
+  
 
   const handleBookmark = () => {
     // Perform bookmark action for the selected items
