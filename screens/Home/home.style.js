@@ -57,18 +57,25 @@ const styles = StyleSheet.create({
         fontSize: 14,
         marginBottom: 10,
     },
+    notedate: {
+      color: 'white',
+      fontSize: 11,
+      padding: 4,
+      borderRadius:6,
+      alignSelf: 'flex-start',
+      backgroundColor:"#F46A4E"
+    },
+    
     separator: {
-      borderBottomWidth: 1,
-      borderBottomColor: 'grey',
-      marginVertical: 10,
+    borderBottomWidth: 1,
+    borderBottomColor: 'grey',
+    marginVertical: 10,
     },
-     homebtncontainer: {
-     
-    },
+   
     noteContainer: {
-      flexDirection: 'row',
-      alignItems: 'center',
-      marginBottom: 10,
+    flexDirection: 'row',
+    alignItems: 'center',
+    marginBottom: 10,
     },
     checkbox: {
       width: 20,

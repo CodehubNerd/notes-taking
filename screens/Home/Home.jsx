@@ -103,9 +103,13 @@ const Home = ({ navigation,route  }) => {
     >
   
       <View>
-      <Text style={styles.note}>{text}</Text>
+                <Text style={styles.note}>{text}</Text>
+                <View>
+                <Text style={styles.notedate}>05 june</Text>
+                </View>
+     
       {selectedItems.includes(index) && <View style={styles.checkbox} />}
-      {index !== typedTextList.length - 1 && <View style={styles.separator} />}
+      {index !== typedTextList.length - 1 && <View style={styles.separator}/>}
                 
       </View>
       </TouchableOpacity>
