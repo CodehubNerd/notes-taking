@@ -5,6 +5,8 @@ import Floatbtn from '../../componets/Floatbtn';
 import { Feather } from '@expo/vector-icons';
 import { MaterialIcons } from '@expo/vector-icons';
 import styles from "./home.style";
+import { ImageBackground } from 'react-native';
+
 
 const Home = ({ navigation,route  }) => {
   const typedText = route.params?.tytext || '';
