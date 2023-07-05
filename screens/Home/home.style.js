@@ -7,13 +7,27 @@ const styles = StyleSheet.create({
         flex: 1,
         backgroundColor: "#010101",
         padding:18,
-    },
+  },
+  header: {
+    zIndex: 1,
+  },
+  backgroundImage: {
+    flex: 1,
+    resizeMode: 'cover',
+    justifyContent: 'center',
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    right: 0,
+    bottom: 0,
+    zIndex: 0,
+  },
     Headingtext: {
         color: "#FAFAFA",
         textAlign: 'center',
         fontSize: SIZES.large,
         justifyContent: "center",
-         marginTop:200,
+         marginTop:20,
         
     },
     smalltext: {
@@ -21,7 +35,7 @@ const styles = StyleSheet.create({
         textAlign: 'center',
         fontSize: SIZES.small,
         justifyContent: "center",
-        marginTop:10,
+        marginBottom: 20,
    
     },
     iconscontainer: {
@@ -43,7 +57,7 @@ const styles = StyleSheet.create({
         color: 'white',
         borderRadius:8,
         flex: 1,
-        marginTop:20,
+        marginTop:400,
         padding:20,
     },
 

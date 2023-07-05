@@ -86,10 +86,15 @@ const Home = ({ navigation,route  }) => {
 
   
   return (
-    <View style = {styles.container}>
-      <Text style = {styles.Headingtext}>Notes</Text>
-          <Text style={styles.smalltext}>{typedTextList.length} notes</Text>
-          
+    <View style={styles.container}>
+    <View style={styles.header}>
+    <Text style={styles.Headingtext}>Notes</Text>
+    <Text style={styles.smalltext}>{typedTextList.length} notes</Text>
+      </View>
+
+      <ImageBackground source={require('../../assets/background.png')} style={styles.backgroundImage}>
+
+      
           <View style = {styles.iconscontainer}>
               <TouchableOpacity><Feather name="menu" size={20} color="white" /></TouchableOpacity>
 
@@ -144,7 +149,7 @@ const Home = ({ navigation,route  }) => {
         <Floatbtn/>
 </View>
      
-
+</ImageBackground>
     </View>
   )
 }
