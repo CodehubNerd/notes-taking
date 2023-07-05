@@ -48,6 +48,12 @@ const Home = ({ navigation,route  }) => {
     setShowModal(false);
   };
 
+  const currentDate = new Date().toLocaleDateString('en-US', {
+    day: 'numeric',
+    month: 'long',
+    year: 'numeric',
+  });
+
   const handleDelete = () => {
     // Filter out the selected items from the typedTextList
     const updatedList = typedTextList.filter((_, index) => !selectedItems.includes(index));
@@ -105,7 +111,7 @@ const Home = ({ navigation,route  }) => {
       <View>
                 <Text style={styles.note}>{text}</Text>
                 <View>
-                <Text style={styles.notedate}>05 june</Text>
+                  <Text style={styles.notedate}>{currentDate}</Text>
                 </View>
      
       {selectedItems.includes(index) && <View style={styles.checkbox} />}

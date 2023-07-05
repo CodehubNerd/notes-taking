@@ -58,12 +58,12 @@ const styles = StyleSheet.create({
         marginBottom: 10,
     },
     notedate: {
-      color: 'white',
+      color: '#ff5533',
       fontSize: 11,
       padding: 4,
-      borderRadius:6,
+      borderRadius:10,
       alignSelf: 'flex-start',
-      backgroundColor:"#F46A4E"
+      backgroundColor:"#f46a4e48"
     },
     
     separator: {
@@ -76,7 +76,8 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     marginBottom: 10,
-    },
+  },
+    
     checkbox: {
       width: 20,
       height: 20,
