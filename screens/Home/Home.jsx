@@ -87,7 +87,7 @@ const Home = ({ navigation,route  }) => {
         await SecureStore.setItemAsync('typedText', JSON.stringify(updatedList));
       } catch (error) {
         console.log(error);
-      }
+      } 
     };
   
     saveTypedText();
