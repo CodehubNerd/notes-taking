@@ -35,14 +35,21 @@ const styles = StyleSheet.create({
         textAlign: 'center',
         fontSize: SIZES.small,
         justifyContent: "center",
-        marginBottom: 20,
+      marginBottom: 20,
+      color: '#ff5533',
+      fontSize: 11,
+      padding: 4,
+      borderRadius:10,
+      alignSelf: 'center',
+      backgroundColor:"#f46a4e48"
    
     },
     iconscontainer: {
         display: 'flex',
-        flexDirection: 'row',
+      flexDirection: 'row',
+        padding:10,
         justifyContent: 'space-between',
-        marginTop:30,
+    marginTop:40,
        
         
     },

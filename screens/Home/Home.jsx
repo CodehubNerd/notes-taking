@@ -6,12 +6,16 @@ import { Feather } from '@expo/vector-icons';
 import { MaterialIcons } from '@expo/vector-icons';
 import styles from "./home.style";
 import { ImageBackground } from 'react-native';
+import { RefreshControl } from 'react-native';
+
 
 
 const Home = ({ navigation,route  }) => {
   const typedText = route.params?.tytext || '';
   const [typedTextList, setTypedTextList] = useState([]);
   const [selectedItems, setSelectedItems] = useState([]);
+  const [isRefreshing, setRefreshing] = useState(false);
+
   const [showModal, setShowModal] = useState(false);
 
 
@@ -56,6 +60,20 @@ const Home = ({ navigation,route  }) => {
     year: 'numeric',
   });
 
+  //refreshing the app
+  const handleRefresh = () => {
+    // Perform any necessary refresh actions here
+    // For example, fetch new data or update the existing data
+  
+    setRefreshing(true); // Show the refreshing indicator
+  
+    // Simulate an asynchronous task with a timeout
+    setTimeout(() => {
+      setRefreshing(false); // Hide the refreshing indicator
+    }, 2000); // Adjust the timeout duration as needed
+  };
+  
+
   const handleDelete = () => {
     // Filter out the selected items from the typedTextList
     const updatedList = typedTextList.filter((_, index) => !selectedItems.includes(index));
@@ -99,14 +117,13 @@ const Home = ({ navigation,route  }) => {
               <TouchableOpacity><Feather name="menu" size={20} color="white" /></TouchableOpacity>
 
               <View style ={styles.iconscontainerright}>
-             <TouchableOpacity style  ={{marginRight:20}}><Feather name="search" size={20} color="white" /></TouchableOpacity>
               <TouchableOpacity><MaterialIcons name="more-vert" size={20} color="white" /></TouchableOpacity> 
               </View>
       </View>
    
       <View style={styles.notestaken}>
 
-  <ScrollView  >
+  <ScrollView refreshControl={<RefreshControl refreshing={isRefreshing} onRefresh={handleRefresh} />} >
           {typedTextList.map((text, index) => (
       
       <TouchableOpacity
@@ -132,16 +149,16 @@ const Home = ({ navigation,route  }) => {
         <View style={styles.modalContainer}>
           <View style={styles.bottomMenu}>
             <TouchableOpacity onPress={handleShare}>
-              <Feather name="share" size={20} color="#F46A4E" />
+              <Feather name="share" size={23} color="#F46A4E" />
             </TouchableOpacity>
             <TouchableOpacity onPress={handleDelete}>
-              <Feather name="trash" size={20} color="#F46A4E" />
+              <Feather name="trash" size={23} color="#F46A4E" />
             </TouchableOpacity>
             <TouchableOpacity onPress={handleBookmark}>
-              <Feather name="bookmark" size={20} color="#F46A4E" />
+              <Feather name="bookmark" size={23} color="#F46A4E" />
             </TouchableOpacity>
             <TouchableOpacity onPress={handleCancel}>
-              <Feather name="x" size={20} color="#F46A4E" />
+              <Feather name="x" size={23} color="#F46A4E" />
             </TouchableOpacity>
           </View>
         </View>
