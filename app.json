@@ -5,6 +5,7 @@
       "bundler": "metro"
     },
     "name": "notes-taking",
-    "slug": "notes-taking"
+    "slug": "notes-taking",
+    "icon": "./assets/icon.png"
   }
 }
