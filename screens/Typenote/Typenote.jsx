@@ -1,7 +1,7 @@
 import { View,Text,TextInput,TouchableOpacity} from 'react-native';
 import React, { useState, useEffect } from 'react';
 import * as SecureStore from 'expo-secure-store';
-import { AntDesign } from '@expo/vector-icons';
+import { Ionicons } from '@expo/vector-icons';
 import styles from "./typenote.style";
 
 
@@ -45,7 +45,7 @@ const Typenote = ({navigation}) => {
     <View style ={styles.container}>
       <View style={styles.iconscontainer}>
          <TouchableOpacity onPress={handleButtonPress}>
-          <AntDesign  style={styles.round} name="back" size={24} color="#989898" />
+         <Ionicons name="arrow-back-circle-outline" size={24} color="#ff5533" />
         </TouchableOpacity>
 
         <View style={styles.txtcontainertyping}>

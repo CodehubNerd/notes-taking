@@ -40,7 +40,7 @@ const styles = StyleSheet.create({
     round: {
         padding: 6,
         borderRadius:50,
-        backgroundColor: "#3A3A3A",
+        backgroundColor: "#f46a4e48",
         textAlign:'center',
     },
 })
