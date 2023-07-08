@@ -6,6 +6,11 @@
     },
     "name": "notes-taking",
     "slug": "notes-taking",
-    "icon": "./assets/icon.png"
+    "icon": "./assets/icon.png",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#010101"
+    }
   }
 }
