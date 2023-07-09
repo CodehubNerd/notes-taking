@@ -21,7 +21,7 @@ const Home = ({ navigation,route  }) => {
 
   // as soon we log the screen we fecth this informmation from the storage
   useEffect(() => {
-    const retrieveTypedText = async () => {
+    const fetchTypedText = async () => {
       try {
         const storedText = await SecureStore.getItemAsync('typedText');
         if (storedText) {
@@ -33,9 +33,17 @@ const Home = ({ navigation,route  }) => {
       }
     };
 
-    retrieveTypedText();
+    // Fetch the typed text on initial mount and whenever the screen is focused
+    fetchTypedText();
+
+    const focusListener = navigation.addListener('focus', () => {
+      fetchTypedText();
+    });
+
+    return () => {
+      focusListener();
+    };
   }, []);
-  
 
   //functions 
   
