@@ -11,6 +11,14 @@
       "image": "./assets/splash.png",
       "resizeMode": "contain",
       "backgroundColor": "#010101"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "fb582be1-5979-4d8e-8fc8-c6c1fb72592a"
+      }
+    },
+    "android": {
+      "package": "com.dlaminisaneliso.notestaking"
     }
   }
 }
