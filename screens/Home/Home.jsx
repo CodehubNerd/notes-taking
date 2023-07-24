@@ -107,6 +107,13 @@ const Home = ({ navigation,route  }) => {
 
   const handleBookmark = () => {
     // Perform bookmark action for the selected items
+    const bookmarkedItems = typedTextList.filter((_, index) => selectedItems.includes(index));
+    
+    // You can add the 'bookmarkedItems' to a separate list or store them in a bookmarked state.
+    // For example, you could use a 'bookmarkedList' state and add the items to it.
+    // setBookmarkedList((prevList) => [...prevList, ...bookmarkedItems]);
+
+    setSelectedItems([]);
     setShowModal(false);
   };
 
